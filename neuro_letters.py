@@ -187,7 +187,7 @@ while errs:
 	errs += LearnLetters (letters_dict, IsRandom=True)
 	
 
-for noise in range (1,7):
+for noise in range (1,12):
 	errs = 1
 	while errs:
 		errs = 0
