@@ -142,7 +142,7 @@ def LearnLetters (letters_dict, noised=0, IsRandom=False):
 
 		letter_arr = letters_dict[let].noised(noised)
 		# feed to our network each letter
-		class_num, max_out = perceptron.start(letters_dict[let].flatten())
+		class_num, max_out = perceptron.start(letter_arr)
 		print noised, " !!!!", true_class, let
 
 		#repeat this until it will return true output value, and perceptron will be shure, that it is right letter
@@ -187,7 +187,7 @@ while errs:
 	errs += LearnLetters (letters_dict, IsRandom=True)
 	
 
-for noise in range (1,12):
+for noise in range (1,15):
 	errs = 1
 	while errs:
 		errs = 0
